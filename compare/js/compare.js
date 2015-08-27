@@ -65,6 +65,8 @@ compareApp.controller('MainCtrl', function ($scope, $route, $routeParams, $q, $h
 		$scope.params = JSON.stringify($routeParams,null,2);
 		$scope.action = $route.current.action;
 
+		console.log( $routeParams );
+
 		if($scope.action=='url')
 			$scope.runUrlConfig($routeParams);
 		else

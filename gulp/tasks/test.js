@@ -79,7 +79,8 @@ gulp.task('test',['init'], function () {
     if(genReferenceMode || !resultConfig.testPairs||resultConfig.testPairs.length==0){
       console.log('\nRun `$ gulp test` to generate diff report.\n')
     }else{
-      gulp.run('report');
+      // do not auto start report page launch (for now)
+      // gulp.run('report');
     }
 
   });
