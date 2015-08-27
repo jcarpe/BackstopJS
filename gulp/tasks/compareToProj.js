@@ -18,10 +18,6 @@ gulp.task( 'copyCompare', function () {
 });
 
 gulp.task( 'copyCompareData', function () {
-	// gulp.src([ paths.compareConfigFileName ])
-	// 	.pipe( rename( 'config.json' ) )
-	// 	.pipe( gulp.dest( paths.comparePath ) );
-		
 	gulp.src(paths.compareConfigFileName)
 		.pipe(jeditor(function(json) {
 			json.testPairs.forEach(function(item){
