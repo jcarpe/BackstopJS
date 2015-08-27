@@ -1,4 +1,11 @@
-[![Build Status](https://travis-ci.org/garris/BackstopJS.svg)](https://travis-ci.org/garris/BackstopJS)
+##Modifications
+####release dependency on node_modules/BackstopJS dir
+We want generated and working files outside of the node_modules directory. This will made the report independent of the module directory, but will require the user to run the dashboard from their own server (compare directory).
+
+
+####make gulp test and dash build commands accessible form project root
+Like the above, we want to decouple from the node_modules directory where the module is installed. As part of this goal, we want to have the test and report commands accessible from the project root directory.
+
 
 #BackstopJS
 **Catch CSS curve balls.**
@@ -272,14 +279,14 @@ For obvious reasons, this screenshot approach is not optimal for testing live dy
 That said, for a use case where you are testing a DOM with say an ad banner or a block of dynamic content which retains static dimensions, we have the `hideSelectors` property in `capture/config.json` which will set the corresponding DOM to `visibility:hidden`, thus hiding the content from our Resemble.js analysis but retaining the original layout flow.
 
     "hideSelectors": [
-    	"#someFixedSizeDomSelector"
+      "#someFixedSizeDomSelector"
     ]
 
 ####removing selectors
 There may also be elements which need to be completely removed during testing. For that we have `removeSelectors` which sets elements to `display:none`.
 
     "removeSelectors": [
-    	"#someUnpredictableSizedDomSelector"
+      "#someUnpredictableSizedDomSelector"
     ]
 
 ### moving the bitmap directories (version 0.6.0+)
