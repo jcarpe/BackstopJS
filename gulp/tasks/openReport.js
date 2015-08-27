@@ -34,7 +34,7 @@ gulp.task("openReport", function(){
       })
       return json;
     }))
-    .pipe(rename('compare/config.json'))
+    .pipe(rename('../compare/config.json'))
     .pipe(gulp.dest('.'))
     .pipe(open("",options));
 

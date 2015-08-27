@@ -54,7 +54,8 @@ if(fs.existsSync(paths.activeCaptureConfigPath)){
     '\n----Altered Paths from Config-----' +
     '\nbitmap reference:      ' + paths.bitmaps_reference +
     '\nbitmap test:           ' + paths.bitmaps_test +
-    '\ncompareConfigFileName: ' + paths.compareConfigFileName
+    '\ncompareConfigFileName: ' + paths.compareConfigFileName +
+    '\n----------------------------------'
   );
 
   paths.engine = config.engine || null;
